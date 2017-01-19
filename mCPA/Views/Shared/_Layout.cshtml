@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Shannon Cai CPA Firm</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")    
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Shannon Cai CPA", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("MenuPartial")
+                @*<ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>*@
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        
+        <footer>  
+            <hr />                      
+            Shannon Cai CPA Firm | 379 Potomac Dr. Basking Ridge, NJ 07920 | Phone: (732)503-9210 | <a href="mailto:info@scaicpa.com">info@scaicpa.com</a>
+            <br /><br />
+            @*<a href="Sitemap" class="footer-link">Sitemap</a>
+            <a href="Disclaimer" class="footer-link">Disclamer</a>
+            <a href="Privacy" class="footer-link">Privacy Policy</a>*@
+            @Html.ActionLink("Sitemap", "Sitemap", new { controller = "Home" }, new { @class = "footer-link" })
+            @Html.ActionLink("Disclamer", "Disclamer", new { controller = "Home" }, new { @class = "footer-link" })
+
+            @Html.ActionLink("Privacy Policy", "Privacy", new { controller = "Home" }, new { @class = "footer-link" })
+            <br /><br />
+            &copy; @DateTime.Now.Year - Shannon Cai CPA Firm. All Rights Reserved.
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

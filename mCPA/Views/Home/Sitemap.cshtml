@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Sitemap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <ul class="sitemap">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>
+            <a href="#">Individual Services</a>
+            <ul>
+                <li>@Html.ActionLink("Preparation & Planning", "Individual", "Services")</li>
+                <li>@Html.ActionLink("Tax Problem Resolution", "Resolution", "Services")</li>
+            </ul>
+
+        <li>@Html.ActionLink("Business Services", "Business", "Services")</li>
+        <li class="dropdown">
+            <a href="#">Resources</a>
+            <ul>
+                <li>@Html.ActionLink("News", "News", "Resources")</li>
+                <li>@Html.ActionLink("Forms & Pubs", "Forms", "Resources")</li>
+                <li>@Html.ActionLink("eBooks", "EBooks", "Resources")</li>
+            </ul>
+        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Disclaimer", "Disclaimer", "Home")</li>
+        <li>@Html.ActionLink("Privacy Policy", "Privacy", "Home")</li>
+    </ul>
+</div>
+
